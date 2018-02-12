@@ -1,0 +1,7 @@
+//Code
+@each $palette-color-prefix, $palette-color-variables in get-colors-palette($code-colors-support-extra-colors-palette, $code-colors-support-skip-colors-palette) {
+    .#{$colors-class-prefix}-#{$palette-color-prefix} code,
+    code.#{$colors-class-prefix}-#{$palette-color-prefix} {
+        @include code-colors-propertys(parse-map($code-colors-support-parser, $palette-color-variables));
+    }
+}
